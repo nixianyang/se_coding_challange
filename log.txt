@@ -1,0 +1,335 @@
+(base) Xianyangs-MacBook-Air:mydag nixianyang$ digdag run run_it.dig
+2020-02-20 22:56:46 -0800: Digdag v0.9.41
+2020-02-20 22:56:49 -0800 [WARN] (main): Using a new session time 2020-02-21T00:00:00+00:00.
+2020-02-20 22:56:49 -0800 [INFO] (main): Using session /Users/nixianyang/mydag/.digdag/status/20200221T000000+0000.
+2020-02-20 22:56:49 -0800 [INFO] (main): Starting a new session project id=1 workflow name=run_it session_time=2020-02-21T00:00:00+00:00
+2020-02-20 22:56:50 -0800 [INFO] (0017@[0:default]+run_it+ingestion+data1): sh>: embulk run ~/mydata/load_page.yml
+2020-02-20 22:56:50 -0800 [INFO] (0018@[0:default]+run_it+ingestion+data2): sh>: embulk run ~/mydata/load_cust.yml
+2020-02-20 22:56:51.582 -0800: Embulk v0.9.23
+2020-02-20 22:56:51.586 -0800: Embulk v0.9.23
+2020-02-20 22:56:53.722 -0800 [WARN] (main): DEPRECATION: JRuby org.jruby.embed.ScriptingContainer is directly injected.
+2020-02-20 22:56:53.732 -0800 [WARN] (main): DEPRECATION: JRuby org.jruby.embed.ScriptingContainer is directly injected.
+2020-02-20 22:56:59.866 -0800 [INFO] (main): Gem's home and path are set by default: "/Users/nixianyang/.embulk/lib/gems"
+2020-02-20 22:56:59.924 -0800 [INFO] (main): Gem's home and path are set by default: "/Users/nixianyang/.embulk/lib/gems"
+2020-02-20 22:57:01.950 -0800 [INFO] (main): Started Embulk v0.9.23
+2020-02-20 22:57:01.993 -0800 [INFO] (main): Started Embulk v0.9.23
+2020-02-20 22:57:02.223 -0800 [INFO] (0001:transaction): Loaded plugin embulk-output-mysql (0.8.7)
+2020-02-20 22:57:02.286 -0800 [INFO] (0001:transaction): Loaded plugin embulk-output-mysql (0.8.7)
+2020-02-20 22:57:02.562 -0800 [INFO] (0001:transaction): Listing local files at directory '/Users/nixianyang/Downloads/SE Coding Challenge' filtering filename by prefix 'pageviews_'
+2020-02-20 22:57:02.562 -0800 [INFO] (0001:transaction): Listing local files at directory '/Users/nixianyang/Downloads/SE Coding Challenge' filtering filename by prefix 'customers_'
+2020-02-20 22:57:02.565 -0800 [INFO] (0001:transaction): "follow_symlinks" is set false. Note that symbolic links to directories are skipped.
+2020-02-20 22:57:02.565 -0800 [INFO] (0001:transaction): "follow_symlinks" is set false. Note that symbolic links to directories are skipped.
+2020-02-20 22:57:02.568 -0800 [INFO] (0001:transaction): Loading files [/Users/nixianyang/Downloads/SE Coding Challenge/pageviews_2.csv, /Users/nixianyang/Downloads/SE Coding Challenge/pageviews_1.csv]
+2020-02-20 22:57:02.568 -0800 [INFO] (0001:transaction): Loading files [/Users/nixianyang/Downloads/SE Coding Challenge/customers_1.csv, /Users/nixianyang/Downloads/SE Coding Challenge/customers_2.csv]
+2020-02-20 22:57:02.638 -0800 [INFO] (0001:transaction): Using local thread executor with max_threads=8 / output tasks 4 = input tasks 2 * 2
+2020-02-20 22:57:02.671 -0800 [INFO] (0001:transaction): Using local thread executor with max_threads=8 / output tasks 4 = input tasks 2 * 2
+2020-02-20 22:57:02.702 -0800 [INFO] (0001:transaction): JDBC Driver = /Users/nixianyang/.embulk/lib/gems/gems/embulk-output-mysql-0.8.7/default_jdbc_driver/mysql-connector-java-5.1.44.jar
+2020-02-20 22:57:02.775 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:02.794 -0800 [INFO] (0001:transaction): JDBC Driver = /Users/nixianyang/.embulk/lib/gems/gems/embulk-output-mysql-0.8.7/default_jdbc_driver/mysql-connector-java-5.1.44.jar
+2020-02-20 22:57:02.820 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.309 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.309 -0800 [INFO] (0001:transaction): Using JDBC Driver mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )
+2020-02-20 22:57:03.309 -0800 [WARN] (0001:transaction): This plugin will update MySQL Connector/J version in the near future release.
+2020-02-20 22:57:03.309 -0800 [WARN] (0001:transaction): It has some incompatibility changes.
+2020-02-20 22:57:03.309 -0800 [WARN] (0001:transaction): For example, the 5.1.35 introduced `noTimezoneConversionForDateType` and `cacheDefaultTimezone` options.
+2020-02-20 22:57:03.309 -0800 [WARN] (0001:transaction): Please read a document and make sure configuration carefully before updating the plugin.
+2020-02-20 22:57:03.309 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.310 -0800 [INFO] (0001:transaction): Using JDBC Driver mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )
+2020-02-20 22:57:03.310 -0800 [WARN] (0001:transaction): This plugin will update MySQL Connector/J version in the near future release.
+2020-02-20 22:57:03.310 -0800 [WARN] (0001:transaction): It has some incompatibility changes.
+2020-02-20 22:57:03.310 -0800 [WARN] (0001:transaction): For example, the 5.1.35 introduced `noTimezoneConversionForDateType` and `cacheDefaultTimezone` options.
+2020-02-20 22:57:03.310 -0800 [WARN] (0001:transaction): Please read a document and make sure configuration carefully before updating the plugin.
+2020-02-20 22:57:03.312 -0800 [WARN] (0001:transaction): The client timezone(America/Los_Angeles) is different from the server timezone(GMT+08:00). The plugin will store wrong datetime values.
+2020-02-20 22:57:03.312 -0800 [WARN] (0001:transaction): The client timezone(America/Los_Angeles) is different from the server timezone(GMT+08:00). The plugin will store wrong datetime values.
+2020-02-20 22:57:03.313 -0800 [WARN] (0001:transaction): You may need to set options `useLegacyDatetimeCode` and `serverTimezone`
+2020-02-20 22:57:03.313 -0800 [WARN] (0001:transaction): Example. `options: { useLegacyDatetimeCode: false, serverTimezone: UTC }`
+2020-02-20 22:57:03.313 -0800 [WARN] (0001:transaction): The plugin will set `useLegacyDatetimeCode=false` by default in future.
+2020-02-20 22:57:03.313 -0800 [INFO] (0001:transaction): Using insert mode
+2020-02-20 22:57:03.313 -0800 [WARN] (0001:transaction): You may need to set options `useLegacyDatetimeCode` and `serverTimezone`
+2020-02-20 22:57:03.314 -0800 [WARN] (0001:transaction): Example. `options: { useLegacyDatetimeCode: false, serverTimezone: UTC }`
+2020-02-20 22:57:03.314 -0800 [WARN] (0001:transaction): The plugin will set `useLegacyDatetimeCode=false` by default in future.
+2020-02-20 22:57:03.314 -0800 [INFO] (0001:transaction): Using insert mode
+2020-02-20 22:57:03.346 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `customers_tmp_0000017066890f6a_embulk000` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT)
+2020-02-20 22:57:03.351 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `pageviews_tmp_0000017066890f6d_embulk000` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT)
+2020-02-20 22:57:03.364 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.365 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.369 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `customers_tmp_0000017066890f6a_embulk001` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT)
+2020-02-20 22:57:03.375 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `pageviews_tmp_0000017066890f6d_embulk001` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT)
+2020-02-20 22:57:03.382 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.387 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `customers_tmp_0000017066890f6a_embulk002` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT)
+2020-02-20 22:57:03.391 -0800 [INFO] (0001:transaction): > 0.02 seconds
+2020-02-20 22:57:03.398 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.399 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `pageviews_tmp_0000017066890f6d_embulk002` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT)
+2020-02-20 22:57:03.402 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `customers_tmp_0000017066890f6a_embulk003` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT)
+2020-02-20 22:57:03.411 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.413 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.415 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `pageviews_tmp_0000017066890f6d_embulk003` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT)
+2020-02-20 22:57:03.426 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.548 -0800 [INFO] (0001:transaction): {done:  0 / 2, running: 0}
+2020-02-20 22:57:03.575 -0800 [INFO] (0015:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.575 -0800 [INFO] (0016:task-0001): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.590 -0800 [INFO] (0016:task-0001): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.590 -0800 [INFO] (0016:task-0001): Prepared SQL: INSERT INTO `customers_tmp_0000017066890f6a_embulk002` (`user_id`, `first_name`, `last_name`, `job_title`) VALUES (?, ?, ?, ?)
+2020-02-20 22:57:03.592 -0800 [INFO] (0015:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.593 -0800 [INFO] (0015:task-0000): Prepared SQL: INSERT INTO `customers_tmp_0000017066890f6a_embulk000` (`user_id`, `first_name`, `last_name`, `job_title`) VALUES (?, ?, ?, ?)
+2020-02-20 22:57:03.602 -0800 [INFO] (0001:transaction): {done:  0 / 2, running: 0}
+2020-02-20 22:57:03.605 -0800 [INFO] (0015:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.609 -0800 [INFO] (0016:task-0001): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.618 -0800 [INFO] (0015:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.623 -0800 [INFO] (0016:task-0001): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.623 -0800 [INFO] (0016:task-0001): Prepared SQL: INSERT INTO `pageviews_tmp_0000017066890f6d_embulk002` (`user_id`, `url`, `user_agent`, `timestamp`) VALUES (?, ?, ?, ?)
+2020-02-20 22:57:03.624 -0800 [INFO] (0016:task-0001): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.648 -0800 [INFO] (0015:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.648 -0800 [INFO] (0015:task-0000): Prepared SQL: INSERT INTO `pageviews_tmp_0000017066890f6d_embulk000` (`user_id`, `url`, `user_agent`, `timestamp`) VALUES (?, ?, ?, ?)
+2020-02-20 22:57:03.649 -0800 [INFO] (0016:task-0001): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.655 -0800 [INFO] (0015:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.659 -0800 [INFO] (0016:task-0001): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.659 -0800 [INFO] (0016:task-0001): Prepared SQL: INSERT INTO `customers_tmp_0000017066890f6a_embulk003` (`user_id`, `first_name`, `last_name`, `job_title`) VALUES (?, ?, ?, ?)
+2020-02-20 22:57:03.664 -0800 [INFO] (0016:task-0001): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.664 -0800 [INFO] (0016:task-0001): Prepared SQL: INSERT INTO `pageviews_tmp_0000017066890f6d_embulk003` (`user_id`, `url`, `user_agent`, `timestamp`) VALUES (?, ?, ?, ?)
+2020-02-20 22:57:03.673 -0800 [INFO] (0015:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.673 -0800 [INFO] (0015:task-0000): Prepared SQL: INSERT INTO `pageviews_tmp_0000017066890f6d_embulk001` (`user_id`, `url`, `user_agent`, `timestamp`) VALUES (?, ?, ?, ?)
+2020-02-20 22:57:03.677 -0800 [INFO] (0015:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.678 -0800 [INFO] (0015:task-0000): Prepared SQL: INSERT INTO `customers_tmp_0000017066890f6a_embulk001` (`user_id`, `first_name`, `last_name`, `job_title`) VALUES (?, ?, ?, ?)
+2020-02-20 22:57:03.859 -0800 [INFO] (0015:task-0000): Loading 49 rows
+2020-02-20 22:57:03.865 -0800 [INFO] (0015:task-0000): > 0.01 seconds (loaded 49 rows in total)
+2020-02-20 22:57:03.867 -0800 [INFO] (0001:transaction): {done:  1 / 2, running: 1}
+2020-02-20 22:57:03.890 -0800 [INFO] (0016:task-0001): Loading 50 rows
+2020-02-20 22:57:03.896 -0800 [INFO] (0016:task-0001): > 0.01 seconds (loaded 50 rows in total)
+2020-02-20 22:57:03.897 -0800 [INFO] (0001:transaction): {done:  2 / 2, running: 0}
+2020-02-20 22:57:03.898 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=2700000}
+2020-02-20 22:57:03.904 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.907 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE IF NOT EXISTS `customers_tmp` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT)
+2020-02-20 22:57:03.919 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.920 -0800 [INFO] (0001:transaction): SQL: INSERT INTO `customers_tmp` (`user_id`, `first_name`, `last_name`, `job_title`) SELECT `user_id`, `first_name`, `last_name`, `job_title` FROM `customers_tmp_0000017066890f6a_embulk000` UNION ALL SELECT `user_id`, `first_name`, `last_name`, `job_title` FROM `customers_tmp_0000017066890f6a_embulk001` UNION ALL SELECT `user_id`, `first_name`, `last_name`, `job_title` FROM `customers_tmp_0000017066890f6a_embulk002` UNION ALL SELECT `user_id`, `first_name`, `last_name`, `job_title` FROM `customers_tmp_0000017066890f6a_embulk003`
+2020-02-20 22:57:03.926 -0800 [INFO] (0001:transaction): > 0.01 seconds (99 rows)
+2020-02-20 22:57:03.927 -0800 [INFO] (0016:task-0001): Loading 274 rows
+2020-02-20 22:57:03.935 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:03.942 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:03.943 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `customers_tmp_0000017066890f6a_embulk000`
+2020-02-20 22:57:03.949 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.949 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `customers_tmp_0000017066890f6a_embulk001`
+2020-02-20 22:57:03.957 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.958 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `customers_tmp_0000017066890f6a_embulk002`
+2020-02-20 22:57:03.958 -0800 [INFO] (0015:task-0000): Loading 279 rows
+2020-02-20 22:57:03.965 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.965 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `customers_tmp_0000017066890f6a_embulk003`
+2020-02-20 22:57:03.972 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:03.973 -0800 [INFO] (main): Committed.
+2020-02-20 22:57:03.973 -0800 [INFO] (main): Next config diff: {"in":{"last_path":"/Users/nixianyang/Downloads/SE Coding Challenge/customers_2.csv"},"out":{}}
+2020-02-20 22:57:03.976 -0800 [INFO] (0016:task-0001): > 0.05 seconds (loaded 274 rows in total)
+2020-02-20 22:57:03.977 -0800 [INFO] (0016:task-0001): Loading 225 rows
+2020-02-20 22:57:04.004 -0800 [INFO] (0015:task-0000): > 0.05 seconds (loaded 279 rows in total)
+2020-02-20 22:57:04.004 -0800 [INFO] (0015:task-0000): Loading 222 rows
+2020-02-20 22:57:04.015 -0800 [INFO] (0016:task-0001): > 0.04 seconds (loaded 225 rows in total)
+2020-02-20 22:57:04.034 -0800 [INFO] (0015:task-0000): > 0.03 seconds (loaded 222 rows in total)
+2020-02-20 22:57:04.036 -0800 [INFO] (0001:transaction): {done:  2 / 2, running: 0}
+2020-02-20 22:57:04.036 -0800 [INFO] (0001:transaction): {done:  2 / 2, running: 0}
+2020-02-20 22:57:04.037 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=2700000}
+2020-02-20 22:57:04.045 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:04.047 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE IF NOT EXISTS `pageviews_tmp` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT)
+2020-02-20 22:57:04.059 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:04.061 -0800 [INFO] (0001:transaction): SQL: INSERT INTO `pageviews_tmp` (`user_id`, `url`, `user_agent`, `timestamp`) SELECT `user_id`, `url`, `user_agent`, `timestamp` FROM `pageviews_tmp_0000017066890f6d_embulk000` UNION ALL SELECT `user_id`, `url`, `user_agent`, `timestamp` FROM `pageviews_tmp_0000017066890f6d_embulk001` UNION ALL SELECT `user_id`, `url`, `user_agent`, `timestamp` FROM `pageviews_tmp_0000017066890f6d_embulk002` UNION ALL SELECT `user_id`, `url`, `user_agent`, `timestamp` FROM `pageviews_tmp_0000017066890f6d_embulk003`
+2020-02-20 22:57:04.118 -0800 [INFO] (0001:transaction): > 0.06 seconds (1,000 rows)
+2020-02-20 22:57:04.132 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:04.138 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:04.139 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `pageviews_tmp_0000017066890f6d_embulk000`
+2020-02-20 22:57:04.146 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:04.146 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `pageviews_tmp_0000017066890f6d_embulk001`
+2020-02-20 22:57:04.152 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:04.152 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `pageviews_tmp_0000017066890f6d_embulk002`
+2020-02-20 22:57:04.159 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:04.159 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `pageviews_tmp_0000017066890f6d_embulk003`
+2020-02-20 22:57:04.167 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:04.168 -0800 [INFO] (main): Committed.
+2020-02-20 22:57:04.168 -0800 [INFO] (main): Next config diff: {"in":{"last_path":"/Users/nixianyang/Downloads/SE Coding Challenge/pageviews_2.csv"},"out":{}}
+2020-02-20 22:57:04 -0800 [INFO] (0018@[0:default]+run_it+prepare+task_2): sh>: embulk run ~/mydata/new_page.yml
+2020-02-20 22:57:04 -0800 [INFO] (0017@[0:default]+run_it+prepare+task_1): sh>: embulk run ~/mydata/new_cust.yml
+2020-02-20 22:57:05.328 -0800: Embulk v0.9.23
+2020-02-20 22:57:05.344 -0800: Embulk v0.9.23
+2020-02-20 22:57:06.941 -0800 [WARN] (main): DEPRECATION: JRuby org.jruby.embed.ScriptingContainer is directly injected.
+2020-02-20 22:57:06.987 -0800 [WARN] (main): DEPRECATION: JRuby org.jruby.embed.ScriptingContainer is directly injected.
+2020-02-20 22:57:12.038 -0800 [INFO] (main): Gem's home and path are set by default: "/Users/nixianyang/.embulk/lib/gems"
+2020-02-20 22:57:12.057 -0800 [INFO] (main): Gem's home and path are set by default: "/Users/nixianyang/.embulk/lib/gems"
+2020-02-20 22:57:13.911 -0800 [INFO] (main): Started Embulk v0.9.23
+2020-02-20 22:57:13.944 -0800 [INFO] (main): Started Embulk v0.9.23
+2020-02-20 22:57:14.185 -0800 [INFO] (0001:transaction): Loaded plugin embulk-input-mysql (0.10.1)
+2020-02-20 22:57:14.245 -0800 [INFO] (0001:transaction): Loaded plugin embulk-input-mysql (0.10.1)
+2020-02-20 22:57:14.267 -0800 [INFO] (0001:transaction): Loaded plugin embulk-output-mysql (0.8.7)
+2020-02-20 22:57:14.349 -0800 [INFO] (0001:transaction): Loaded plugin embulk-output-mysql (0.8.7)
+2020-02-20 22:57:14.404 -0800 [INFO] (0001:transaction): JDBC Driver = /Users/nixianyang/.embulk/lib/gems/gems/embulk-input-mysql-0.10.1/default_jdbc_driver/mysql-connector-java-5.1.44.jar
+2020-02-20 22:57:14.426 -0800 [INFO] (0001:transaction): Fetch size is 10000. Using server-side prepared statement.
+2020-02-20 22:57:14.428 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {useCompression=true, socketTimeout=1800000, useSSL=false, user=root, useLegacyDatetimeCode=false, tcpKeepAlive=true, useCursorFetch=true, connectTimeout=300000, password=***, zeroDateTimeBehavior=convertToNull}
+2020-02-20 22:57:14.457 -0800 [INFO] (0001:transaction): JDBC Driver = /Users/nixianyang/.embulk/lib/gems/gems/embulk-input-mysql-0.10.1/default_jdbc_driver/mysql-connector-java-5.1.44.jar
+2020-02-20 22:57:14.469 -0800 [INFO] (0001:transaction): Fetch size is 10000. Using server-side prepared statement.
+2020-02-20 22:57:14.483 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {useCompression=true, socketTimeout=1800000, useSSL=false, user=root, useLegacyDatetimeCode=false, tcpKeepAlive=true, useCursorFetch=true, connectTimeout=300000, password=***, zeroDateTimeBehavior=convertToNull}
+2020-02-20 22:57:14.906 -0800 [INFO] (0001:transaction): Using JDBC Driver mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )
+2020-02-20 22:57:14.906 -0800 [WARN] (0001:transaction): embulk-input-mysql 0.9.0 upgraded the bundled MySQL Connector/J version from 5.1.34 to 5.1.44 .
+2020-02-20 22:57:14.906 -0800 [WARN] (0001:transaction): And set useLegacyDatetimeCode=false by default in order to get correct datetime value when the server timezone and the client timezone are different.
+2020-02-20 22:57:14.907 -0800 [WARN] (0001:transaction): Set useLegacyDatetimeCode=true if you need to get datetime value same as older embulk-input-mysql.
+2020-02-20 22:57:14.911 -0800 [INFO] (0001:transaction): Using JDBC Driver mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )
+2020-02-20 22:57:14.912 -0800 [WARN] (0001:transaction): embulk-input-mysql 0.9.0 upgraded the bundled MySQL Connector/J version from 5.1.34 to 5.1.44 .
+2020-02-20 22:57:14.913 -0800 [WARN] (0001:transaction): And set useLegacyDatetimeCode=false by default in order to get correct datetime value when the server timezone and the client timezone are different.
+2020-02-20 22:57:14.914 -0800 [WARN] (0001:transaction): Set useLegacyDatetimeCode=true if you need to get datetime value same as older embulk-input-mysql.
+2020-02-20 22:57:15.081 -0800 [INFO] (0001:transaction): Using local thread executor with max_threads=8 / output tasks 4 = input tasks 1 * 4
+2020-02-20 22:57:15.086 -0800 [INFO] (0001:transaction): Using local thread executor with max_threads=8 / output tasks 4 = input tasks 1 * 4
+2020-02-20 22:57:15.170 -0800 [INFO] (0001:transaction): JDBC Driver = /Users/nixianyang/.embulk/lib/gems/gems/embulk-output-mysql-0.8.7/default_jdbc_driver/mysql-connector-java-5.1.44.jar
+2020-02-20 22:57:15.189 -0800 [INFO] (0001:transaction): JDBC Driver = /Users/nixianyang/.embulk/lib/gems/gems/embulk-output-mysql-0.8.7/default_jdbc_driver/mysql-connector-java-5.1.44.jar
+2020-02-20 22:57:15.223 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:15.226 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:15.764 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:15.764 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:15.765 -0800 [INFO] (0001:transaction): Using JDBC Driver mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )
+2020-02-20 22:57:15.765 -0800 [INFO] (0001:transaction): Using JDBC Driver mysql-connector-java-5.1.44 ( Revision: b3cda4f864902ffdde495b9df93937c3e20009be )
+2020-02-20 22:57:15.765 -0800 [WARN] (0001:transaction): This plugin will update MySQL Connector/J version in the near future release.
+2020-02-20 22:57:15.765 -0800 [WARN] (0001:transaction): This plugin will update MySQL Connector/J version in the near future release.
+2020-02-20 22:57:15.765 -0800 [WARN] (0001:transaction): It has some incompatibility changes.
+2020-02-20 22:57:15.765 -0800 [WARN] (0001:transaction): It has some incompatibility changes.
+2020-02-20 22:57:15.765 -0800 [WARN] (0001:transaction): For example, the 5.1.35 introduced `noTimezoneConversionForDateType` and `cacheDefaultTimezone` options.
+2020-02-20 22:57:15.765 -0800 [WARN] (0001:transaction): For example, the 5.1.35 introduced `noTimezoneConversionForDateType` and `cacheDefaultTimezone` options.
+2020-02-20 22:57:15.765 -0800 [WARN] (0001:transaction): Please read a document and make sure configuration carefully before updating the plugin.
+2020-02-20 22:57:15.765 -0800 [WARN] (0001:transaction): Please read a document and make sure configuration carefully before updating the plugin.
+2020-02-20 22:57:15.767 -0800 [WARN] (0001:transaction): The client timezone(America/Los_Angeles) is different from the server timezone(GMT+08:00). The plugin will store wrong datetime values.
+2020-02-20 22:57:15.767 -0800 [WARN] (0001:transaction): The client timezone(America/Los_Angeles) is different from the server timezone(GMT+08:00). The plugin will store wrong datetime values.
+2020-02-20 22:57:15.767 -0800 [WARN] (0001:transaction): You may need to set options `useLegacyDatetimeCode` and `serverTimezone`
+2020-02-20 22:57:15.767 -0800 [WARN] (0001:transaction): You may need to set options `useLegacyDatetimeCode` and `serverTimezone`
+2020-02-20 22:57:15.767 -0800 [WARN] (0001:transaction): Example. `options: { useLegacyDatetimeCode: false, serverTimezone: UTC }`
+2020-02-20 22:57:15.767 -0800 [WARN] (0001:transaction): The plugin will set `useLegacyDatetimeCode=false` by default in future.
+2020-02-20 22:57:15.767 -0800 [WARN] (0001:transaction): Example. `options: { useLegacyDatetimeCode: false, serverTimezone: UTC }`
+2020-02-20 22:57:15.767 -0800 [WARN] (0001:transaction): The plugin will set `useLegacyDatetimeCode=false` by default in future.
+2020-02-20 22:57:15.767 -0800 [INFO] (0001:transaction): Using insert mode
+2020-02-20 22:57:15.767 -0800 [INFO] (0001:transaction): Using insert mode
+2020-02-20 22:57:15.788 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `pageviews_0000017066894004_embulk000` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT, `job_title` TEXT)
+2020-02-20 22:57:15.791 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `customers_0000017066894005_embulk000` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT, `operating_system` TEXT)
+2020-02-20 22:57:15.884 -0800 [INFO] (0001:transaction): > 0.09 seconds
+2020-02-20 22:57:15.885 -0800 [INFO] (0001:transaction): > 0.10 seconds
+2020-02-20 22:57:15.903 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `customers_0000017066894005_embulk001` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT, `operating_system` TEXT)
+2020-02-20 22:57:15.910 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `pageviews_0000017066894004_embulk001` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT, `job_title` TEXT)
+2020-02-20 22:57:15.918 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:15.927 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `customers_0000017066894005_embulk002` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT, `operating_system` TEXT)
+2020-02-20 22:57:15.927 -0800 [INFO] (0001:transaction): > 0.02 seconds
+2020-02-20 22:57:15.942 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:15.947 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `pageviews_0000017066894004_embulk002` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT, `job_title` TEXT)
+2020-02-20 22:57:15.950 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `customers_0000017066894005_embulk003` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT, `operating_system` TEXT)
+2020-02-20 22:57:15.959 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:15.972 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE `pageviews_0000017066894004_embulk003` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT, `job_title` TEXT)
+2020-02-20 22:57:15.974 -0800 [INFO] (0001:transaction): > 0.02 seconds
+2020-02-20 22:57:15.983 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:16.118 -0800 [INFO] (0001:transaction): {done:  0 / 1, running: 0}
+2020-02-20 22:57:16.167 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.126 -0800 [INFO] (0001:transaction): {done:  0 / 1, running: 0}
+2020-02-20 22:57:16.189 -0800 [INFO] (0016:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.190 -0800 [INFO] (0016:task-0000): Prepared SQL: INSERT INTO `pageviews_0000017066894004_embulk000` (`user_id`, `url`, `user_agent`, `timestamp`, `job_title`) VALUES (?, ?, ?, ?, ?)
+2020-02-20 22:57:16.200 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.219 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.225 -0800 [INFO] (0016:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.225 -0800 [INFO] (0016:task-0000): Prepared SQL: INSERT INTO `customers_0000017066894005_embulk000` (`user_id`, `first_name`, `last_name`, `job_title`, `operating_system`) VALUES (?, ?, ?, ?, ?)
+2020-02-20 22:57:16.260 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.279 -0800 [INFO] (0016:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.279 -0800 [INFO] (0016:task-0000): Prepared SQL: INSERT INTO `customers_0000017066894005_embulk001` (`user_id`, `first_name`, `last_name`, `job_title`, `operating_system`) VALUES (?, ?, ?, ?, ?)
+2020-02-20 22:57:16.285 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.294 -0800 [INFO] (0016:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.295 -0800 [INFO] (0016:task-0000): Prepared SQL: INSERT INTO `pageviews_0000017066894004_embulk001` (`user_id`, `url`, `user_agent`, `timestamp`, `job_title`) VALUES (?, ?, ?, ?, ?)
+2020-02-20 22:57:16.301 -0800 [INFO] (0016:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.301 -0800 [INFO] (0016:task-0000): Prepared SQL: INSERT INTO `customers_0000017066894005_embulk002` (`user_id`, `first_name`, `last_name`, `job_title`, `operating_system`) VALUES (?, ?, ?, ?, ?)
+2020-02-20 22:57:16.306 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.318 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.324 -0800 [INFO] (0016:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.325 -0800 [INFO] (0016:task-0000): Prepared SQL: INSERT INTO `customers_0000017066894005_embulk003` (`user_id`, `first_name`, `last_name`, `job_title`, `operating_system`) VALUES (?, ?, ?, ?, ?)
+2020-02-20 22:57:16.346 -0800 [INFO] (0016:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.346 -0800 [INFO] (0016:task-0000): Prepared SQL: INSERT INTO `pageviews_0000017066894004_embulk002` (`user_id`, `url`, `user_agent`, `timestamp`, `job_title`) VALUES (?, ?, ?, ?, ?)
+2020-02-20 22:57:16.357 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.405 -0800 [INFO] (0016:task-0000): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.405 -0800 [INFO] (0016:task-0000): Prepared SQL: INSERT INTO `pageviews_0000017066894004_embulk003` (`user_id`, `url`, `user_agent`, `timestamp`, `job_title`) VALUES (?, ?, ?, ?, ?)
+2020-02-20 22:57:16.408 -0800 [INFO] (0016:task-0000): Fetch size is 10000. Using server-side prepared statement.
+2020-02-20 22:57:16.408 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {useCompression=true, socketTimeout=1800000, useSSL=false, user=root, useLegacyDatetimeCode=false, tcpKeepAlive=true, useCursorFetch=true, connectTimeout=300000, password=***, zeroDateTimeBehavior=convertToNull}
+2020-02-20 22:57:16.438 -0800 [INFO] (0016:task-0000): SQL: Select c.*,
+case
+WHEN SUBSTRING_INDEX(user_agent,';',1) like "%Macintosh%" then "Macintosh"
+WHEN SUBSTRING_INDEX(user_agent,';',1) like "%Windows%" then "Windows"
+WHEN SUBSTRING_INDEX(user_agent,';',1) like "%Linux%" then "Linux"
+ELSE "OTHER" END AS operating_system
+from customers_tmp c
+Join pageviews_tmp p
+On c.user_id = p.user_id
+
+2020-02-20 22:57:16.464 -0800 [INFO] (0016:task-0000): > 0.02 seconds
+2020-02-20 22:57:16.474 -0800 [INFO] (0016:task-0000): Fetch size is 10000. Using server-side prepared statement.
+2020-02-20 22:57:16.475 -0800 [INFO] (0016:task-0000): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {useCompression=true, socketTimeout=1800000, useSSL=false, user=root, useLegacyDatetimeCode=false, tcpKeepAlive=true, useCursorFetch=true, connectTimeout=300000, password=***, zeroDateTimeBehavior=convertToNull}
+2020-02-20 22:57:16.483 -0800 [INFO] (0016:task-0000): SQL: Select p.*, job_title
+From pageviews_tmp p
+Join customers_tmp c
+on p.user_id = c.user_id
+Where job_title not like "%Sales";
+
+2020-02-20 22:57:16.494 -0800 [INFO] (0016:task-0000): > 0.01 seconds
+2020-02-20 22:57:16.539 -0800 [INFO] (0016:task-0000): Fetched 500 rows.
+2020-02-20 22:57:16.562 -0800 [INFO] (0016:task-0000): Fetched 1,000 rows.
+2020-02-20 22:57:16.564 -0800 [INFO] (0016:task-0000): Loading 332 rows
+2020-02-20 22:57:16.582 -0800 [INFO] (0016:task-0000): > 0.02 seconds (loaded 332 rows in total)
+2020-02-20 22:57:16.583 -0800 [INFO] (0016:task-0000): Loading 332 rows
+2020-02-20 22:57:16.599 -0800 [INFO] (0016:task-0000): Fetched 500 rows.
+2020-02-20 22:57:16.606 -0800 [INFO] (0016:task-0000): > 0.02 seconds (loaded 332 rows in total)
+2020-02-20 22:57:16.607 -0800 [INFO] (0016:task-0000): Loading 170 rows
+2020-02-20 22:57:16.619 -0800 [INFO] (0016:task-0000): > 0.01 seconds (loaded 170 rows in total)
+2020-02-20 22:57:16.620 -0800 [INFO] (0016:task-0000): Loading 166 rows
+2020-02-20 22:57:16.634 -0800 [INFO] (0016:task-0000): > 0.01 seconds (loaded 166 rows in total)
+2020-02-20 22:57:16.635 -0800 [INFO] (0016:task-0000): Loading 272 rows
+2020-02-20 22:57:16.636 -0800 [INFO] (0001:transaction): {done:  1 / 1, running: 0}
+2020-02-20 22:57:16.637 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=2700000}
+2020-02-20 22:57:16.643 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.645 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE IF NOT EXISTS `customers` (`user_id` TEXT, `first_name` TEXT, `last_name` TEXT, `job_title` TEXT, `operating_system` TEXT)
+2020-02-20 22:57:16.655 -0800 [INFO] (0016:task-0000): > 0.02 seconds (loaded 272 rows in total)
+2020-02-20 22:57:16.659 -0800 [INFO] (0016:task-0000): Loading 268 rows
+2020-02-20 22:57:16.660 -0800 [INFO] (0001:transaction): > 0.02 seconds
+2020-02-20 22:57:16.661 -0800 [INFO] (0001:transaction): SQL: INSERT INTO `customers` (`user_id`, `first_name`, `last_name`, `job_title`, `operating_system`) SELECT `user_id`, `first_name`, `last_name`, `job_title`, `operating_system` FROM `customers_0000017066894005_embulk000` UNION ALL SELECT `user_id`, `first_name`, `last_name`, `job_title`, `operating_system` FROM `customers_0000017066894005_embulk001` UNION ALL SELECT `user_id`, `first_name`, `last_name`, `job_title`, `operating_system` FROM `customers_0000017066894005_embulk002` UNION ALL SELECT `user_id`, `first_name`, `last_name`, `job_title`, `operating_system` FROM `customers_0000017066894005_embulk003`
+2020-02-20 22:57:16.686 -0800 [INFO] (0001:transaction): > 0.03 seconds (1,000 rows)
+2020-02-20 22:57:16.691 -0800 [INFO] (0016:task-0000): > 0.03 seconds (loaded 268 rows in total)
+2020-02-20 22:57:16.691 -0800 [INFO] (0016:task-0000): Loading 246 rows
+2020-02-20 22:57:16.699 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.706 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.706 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `customers_0000017066894005_embulk000`
+2020-02-20 22:57:16.720 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:16.720 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `customers_0000017066894005_embulk001`
+2020-02-20 22:57:16.722 -0800 [INFO] (0016:task-0000): > 0.03 seconds (loaded 246 rows in total)
+2020-02-20 22:57:16.722 -0800 [INFO] (0016:task-0000): Loading 204 rows
+2020-02-20 22:57:16.729 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:16.729 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `customers_0000017066894005_embulk002`
+2020-02-20 22:57:16.737 -0800 [INFO] (0016:task-0000): > 0.02 seconds (loaded 204 rows in total)
+2020-02-20 22:57:16.742 -0800 [INFO] (0001:transaction): {done:  1 / 1, running: 0}
+2020-02-20 22:57:16.745 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=2700000}
+2020-02-20 22:57:16.746 -0800 [INFO] (0001:transaction): > 0.02 seconds
+2020-02-20 22:57:16.747 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `customers_0000017066894005_embulk003`
+2020-02-20 22:57:16.752 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.753 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:16.754 -0800 [INFO] (main): Committed.
+2020-02-20 22:57:16.755 -0800 [INFO] (0001:transaction): SQL: CREATE TABLE IF NOT EXISTS `pageviews` (`user_id` TEXT, `url` TEXT, `user_agent` TEXT, `timestamp` TEXT, `job_title` TEXT)
+2020-02-20 22:57:16.755 -0800 [INFO] (main): Next config diff: {"in":{},"out":{}}
+2020-02-20 22:57:16.769 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:16.770 -0800 [INFO] (0001:transaction): SQL: INSERT INTO `pageviews` (`user_id`, `url`, `user_agent`, `timestamp`, `job_title`) SELECT `user_id`, `url`, `user_agent`, `timestamp`, `job_title` FROM `pageviews_0000017066894004_embulk000` UNION ALL SELECT `user_id`, `url`, `user_agent`, `timestamp`, `job_title` FROM `pageviews_0000017066894004_embulk001` UNION ALL SELECT `user_id`, `url`, `user_agent`, `timestamp`, `job_title` FROM `pageviews_0000017066894004_embulk002` UNION ALL SELECT `user_id`, `url`, `user_agent`, `timestamp`, `job_title` FROM `pageviews_0000017066894004_embulk003`
+2020-02-20 22:57:16.816 -0800 [INFO] (0001:transaction): > 0.05 seconds (990 rows)
+2020-02-20 22:57:16.828 -0800 [INFO] (0001:transaction): Connecting to jdbc:mysql://localhost:3306/td_coding_challenge options {user=root, password=***, tcpKeepAlive=true, useSSL=false, useCompression=true, rewriteBatchedStatements=true, connectTimeout=300000, socketTimeout=1800000}
+2020-02-20 22:57:16.835 -0800 [INFO] (0001:transaction): TransactionIsolation=repeatable_read
+2020-02-20 22:57:16.835 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `pageviews_0000017066894004_embulk000`
+2020-02-20 22:57:16.844 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:16.845 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `pageviews_0000017066894004_embulk001`
+2020-02-20 22:57:16.855 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:16.855 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `pageviews_0000017066894004_embulk002`
+2020-02-20 22:57:16.865 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:16.865 -0800 [INFO] (0001:transaction): SQL: DROP TABLE IF EXISTS `pageviews_0000017066894004_embulk003`
+2020-02-20 22:57:16.872 -0800 [INFO] (0001:transaction): > 0.01 seconds
+2020-02-20 22:57:16.873 -0800 [INFO] (main): Committed.
+2020-02-20 22:57:16.873 -0800 [INFO] (main): Next config diff: {"in":{},"out":{}}
+2020-02-20 22:57:17 -0800 [INFO] (0018@[0:default]+run_it+analyze+analysis_1): mysql>: win_eng.sql
+2020-02-20 22:57:17 -0800 [INFO] (0017@[0:default]+run_it+analyze+analysis_2): mysql>: top3.sql
+2020-02-20 22:57:18 -0800 [INFO] (0017@[0:default]+run_it+print+task_3): sh>: echo "$(cat result_1.txt)"
+count(*)
+5424
+2020-02-20 22:57:18 -0800 [INFO] (0017@[0:default]+run_it+print+task_4): sh>: echo "$(cat result_2.txt)"
+user_id,last_page_viewed
+5d9b8515-823e-49b8-ad44-5c91ef23462f,https://microsoft.com/morbi/porttitor.aspx
+752119fa-50dc-4011-8f13-23aa8d78eb18,http://goo.ne.jp/nunc.html
+6cf36c9e-1fa7-491d-a6e1-9c785d68a3d0,http://nps.gov/quis/odio/consequat.json
+Success. Task state is saved at /Users/nixianyang/mydag/.digdag/status/20200221T000000+0000 directory.
+  * Use --session <daily | hourly | "yyyy-MM-dd[ HH:mm:ss]"> to not reuse the last session time.
+  * Use --rerun, --start +NAME, or --goal +NAME argument to rerun skipped tasks.

@@ -1,0 +1,20 @@
+in:
+  type: mysql
+  host: localhost
+  user: root
+  password: ""
+  database: td_coding_challenge
+  query: |
+    Select p.*, job_title
+    From pageviews_tmp p
+    Join customers_tmp c
+    on p.user_id = c.user_id
+    Where job_title not like "%Sales";
+out:
+  type: mysql
+  host: localhost
+  user: root
+  password: ""
+  database: td_coding_challenge
+  table: pageviews
+  mode: insert

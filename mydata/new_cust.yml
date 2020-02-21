@@ -1,0 +1,24 @@
+in:
+  type: mysql
+  host: localhost
+  user: root
+  password: ""
+  database: td_coding_challenge
+  query: |
+    Select c.*,
+    case
+    WHEN SUBSTRING_INDEX(user_agent,';',1) like "%Macintosh%" then "Macintosh"
+    WHEN SUBSTRING_INDEX(user_agent,';',1) like "%Windows%" then "Windows"
+    WHEN SUBSTRING_INDEX(user_agent,';',1) like "%Linux%" then "Linux"
+    ELSE "OTHER" END AS operating_system
+    from customers_tmp c
+    Join pageviews_tmp p
+    On c.user_id = p.user_id
+out:
+  type: mysql
+  host: localhost
+  user: root
+  password: ""
+  database: td_coding_challenge
+  table: customers
+  mode: insert

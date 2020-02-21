@@ -1,0 +1,21 @@
+in:
+  type: file
+  path_prefix: /Users/nixianyang/Downloads/SE Coding Challenge/pageviews_
+  parser:
+    charset: UTF-8
+    newline: CRLF
+    type: csv
+    delimiter: ','
+    quote: '"'
+    escape: '"'
+    trim_if_not_quoted: false
+    skip_header_lines: 1
+    allow_extra_columns: false
+    allow_optional_columns: false
+    columns:
+    - {name: user_id, type: string}
+    - {name: url, type: string}
+    - {name: user_agent, type: string}
+    - {name: timestamp, type: string}
+out: {type: mysql, host: localhost, user: root, password: , database: td_coding_challenge,
+  table: pageviews_tmp, mode: insert}

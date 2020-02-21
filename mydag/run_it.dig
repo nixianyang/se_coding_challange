@@ -1,0 +1,46 @@
+timezone: UTC
+
++ingestion:
+   _parallel: true
+   +data1:
+       sh>: embulk run ~/mydata/load_page.yml
+   +data2:
+       sh>: embulk run ~/mydata/load_cust.yml
+
++prepare:
+   _parallel: true
+   +task_1:
+       sh>: embulk run ~/mydata/new_cust.yml
+   +task_2:
+       sh>: embulk run ~/mydata/new_page.yml
+
+_export:
+  plugin:
+    repositories:
+      #- file://${repos}
+      #- file:///path/to/digdag-plugin-mysql/build/repo
+      - https://jitpack.io
+    dependencies:
+      - com.github.hiroyuki-sato:digdag-plugin-mysql:0.1.1
+
+  mysql:
+    host: localhost
+    user: root
+    database: td_coding_challenge
+    ssl: true
++analyze:
+   _parallel: true
+
+   +analysis_1:
+     mysql>: win_eng.sql
+     download_file: result_1.txt
+   
+   +analysis_2:
+     mysql>: top3.sql
+     download_file: result_2.txt
+
++print:
+   +task_3:
+     sh>: echo "$(cat result_1.txt)"
+   +task_4:
+     sh>: echo "$(cat result_2.txt)"
